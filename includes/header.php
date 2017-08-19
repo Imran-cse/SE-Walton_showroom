@@ -13,6 +13,16 @@
     <title><?php echo ucfirst(basename($_SERVER['PHP_SELF'],'.php')) ?></title>
 </head>
 
+<style>
+    li.dropdown:hover > .dropdown-menu {
+        display: inline-block;
+        border: inherit;
+        font: inherit;
+        font-size: inherit;
+        text-decoration-color: yellow;
+    }
+</style>
+
 <nav class="navbar nav-tabs" style="background-color: none; border-bottom: inset;">
     <div class="container">
         <div class="navbar-header">
@@ -20,6 +30,15 @@
         </div>
         <ul class="nav navbar-nav">
             <li><a href="#"><span class="glyphicon glyphicon-home""></span>Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Mobile</a></li>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Television</a></li>
+                    <li><a href="#">Refrigerator</a></li>
+                </ul>
+            </li>
             <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span>About</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-earphone"></span>Contact</a></li>
         </ul>
