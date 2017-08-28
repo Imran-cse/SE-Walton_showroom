@@ -13,15 +13,19 @@
     </ul>
 </div>
 <div class="form-control">
-    <div style="padding-top: 50px; height: 2000px; ">
-        <p style="text-align: center; color: #2aabd2; font-size: 20px;">
+    <div style="padding-top: 50px; height: 2000px; margin-top: 100px">
+        <p style="text-align: center; color:#ff8f36; font-size: 30px; font-family: 'Comic Sans MS'">
             Welcome to Walton Showroom of Khulna.
         </p>
+        <p style="font-family: 'Copperplate Gothic Bold'; text-align: center; font-size: 20px">
+            The site is under construction so please have patience!!!!
+        </p>
     </div>
-    <div class="footer">
+    <div class="panel-footer">
         <p style="color: black">
             copyright Walton Bangladesh Limited @2017
         </p>
+        
     </div>
 </div>
 

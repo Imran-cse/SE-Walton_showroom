@@ -29,7 +29,7 @@
             <a class="navbar-brand" href="#" style="color: black;">Walton</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="#"><span class="glyphicon glyphicon-home""></span>Home</a></li>
+            <li><a href="../views/home.php"><span class="glyphicon glyphicon-home""></span>Home</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -39,12 +39,12 @@
                     <li><a href="#">Refrigerator</a></li>
                 </ul>
             </li>
-            <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span>About</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-earphone"></span>Contact</a></li>
+            <li><a href="../views/about.php"><span class="glyphicon glyphicon-info-sign"></span>About</a></li>
+            <li><a href="../views/contact.php"><span class="glyphicon glyphicon-earphone"></span>Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="../views/register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="../views/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
     </div>
 </nav>
