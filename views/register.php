@@ -18,13 +18,13 @@
             <div class="form-group">
                 <label for="name" class="col-md-2 control-label">Name</label>
                 <div class="col-md-8">
-                    <input id="name" type="text" name="name" value="" class="form-control">
+                    <input id="name" type="text" name="name" value="" class="form-control" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="email" class="col-md-2 control-label">Email</label>
                 <div class="col-md-8">
-                    <input id="name" type="email" name="email" value="" class="form-control">
+                    <input id="name" type="email" name="email" value="" class="form-control" required>
                 </div>
             </div>
             <div class="form-group">
@@ -36,13 +36,13 @@
             <div class="form-group">
                 <label for="address" class="col-md-2 control-label">Address</label>
                 <div class="col-md-8">
-                    <input id="name" type="text" name="address" value="" class="form-control">
+                    <input id="name" type="text" name="address" value="" class="form-control" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="contact" class="col-md-2 control-label">Contact</label>
                 <div class="col-md-8">
-                    <input id="name" type="number" name="name" value="" class="form-control">
+                    <input id="name" type="number" name="name" value="" class="form-control" required>
                 </div>
             </div>
             <div>

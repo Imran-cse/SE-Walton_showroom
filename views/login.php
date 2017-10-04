@@ -17,17 +17,17 @@
             <div class="form-group">
                 <label for="email" class="col-md-2 control-label">Email</label>
                 <div class="col-md-7">
-                    <input type="email" name="email" class="form-control" id="email">
+                    <input type="email" name="email" class="form-control" id="email" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="password" class="col-md-2 control-label">Password</label>
                 <div class="col-md-7">
-                    <input type="password" name="password" class="form-control" id="password">
+                    <input type="password" name="password" class="form-control" id="password" required>
                 </div>
             </div>
             <div>
-                <input type="button" id="login" value="Login" class="btn btn-primary">
+                <input type="button" id="login" value="Login" class="btn btn-primary" required>
             </div>
         </form>
     </div>

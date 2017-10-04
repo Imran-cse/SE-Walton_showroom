@@ -23,7 +23,7 @@
     }
 </style>
 
-<nav class="navbar nav-tabs" style="background-color: none; border-bottom: inset;">
+<nav class="navbar nav-tabs" style="background-color: #fff52c; border-bottom: inset;">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="#" style="color: black;">Walton</a>
