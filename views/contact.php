@@ -1,16 +1,14 @@
-<?php include "../includes/header.php"
-/**
- * Created by PhpStorm.
- * User: imran
- * Date: 28-Aug-17
- * Time: 6:56 PM
- */
-?>
+<?php include "../includes/header.php" ?>
+
 <body>
-    <div class="form-control">
-        <div class="text-center" style="padding-top: 50px; font-size: 20px" >
-            <p>Contact information of the authority</p>
-        </div>
-    </div>
+	<div class="form-control text-center">
+		<p style="font-size: 20px">
+			Contact information about the showroom.
+		</p>
+		<div class="panel-footer" style="align:bottom">
+			<p style="color: black">
+				copyright Walton Bangladesh Limited @2017
+			</p>    
+		</div>
+	</div>
 </body>
-</html>
