@@ -8,9 +8,9 @@
 ?>
 
 <body>
-<div class="panel col-md-5 col-md-offset-4" style="border-top: outset; border-left: outset;
-                                border-bottom: inset; border-right: inset; margin-top: 50px">
-    <div class="panel-heading">
+    <div class="panel col-md-5 col-md-offset-4" style="border-top: outset; border-left: outset;
+    border-bottom: inset; border-right: inset; margin-top: 50px">
+    <div class="panel-heading" align="center">
         <h3>Register as a new user</h3>
     </div>
     <div class="panel-body">
@@ -45,13 +45,19 @@
                     <input id="name" type="number" name="name" value="" class="form-control" required>
                 </div>
             </div>
-            <div>
-                <input type="button" id="submit" value="Save" class="btn btn-primary"
-                       onclick="" />
+            <div align="center">
+                <input type="button" id="submit" value="Signup" class="btn btn-primary"
+                onclick="" />
             </div>
 
-    </form>
+        </form>
     </div>
+</div>
+</div>
+<div class="panel-footer" style="position: absolute;bottom: 0;width: 100%;text-align: center;">
+    <p style="color: black">
+        copyright Walton Bangladesh Limited @2017
+    </p>    
 </div>
 </body>
 </html>

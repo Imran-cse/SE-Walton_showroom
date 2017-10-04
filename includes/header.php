@@ -26,17 +26,18 @@
 <nav class="navbar nav-tabs" style="background-color: #fff52c; border-bottom: inset;">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#" style="color: black;">Walton</a>
+            <span class="navbar-brand" style="color: black;">Walton</span>
         </div>
         <ul class="nav navbar-nav">
             <li><a href="../views/home.php"><span class="glyphicon glyphicon-home""></span>Home</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Mobile</a></li>
-                    <li><a href="#">Laptop</a></li>
-                    <li><a href="#">Television</a></li>
-                    <li><a href="#">Refrigerator</a></li>
+                    <li><a href="mobile.php">Mobile</a></li>
+                    <li><a href="laptop.php">Laptop</a></li>
+                    <li><a href="television.php">Television</a></li>
+                    <li><a href="#">Home Appliances</a></li>
+                    <li><a href="#">Electrical Appliances</a></li>
                 </ul>
             </li>
             <li><a href="../views/about.php"><span class="glyphicon glyphicon-info-sign"></span>About</a></li>
