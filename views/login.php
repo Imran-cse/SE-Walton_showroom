@@ -26,13 +26,8 @@
                     <input type="password" name="password" class="form-control" id="password" required>
                 </div>
             </div>
-<<<<<<< HEAD
-            <div>
-                <input type="button" id="login" value="Login" class="btn btn-primary" required>
-=======
-            <div align="right">
+            <div align="left">
                 <input type="button" id="login" value="Login" class="btn btn-primary">
->>>>>>> 3aaeaaa2dc636a2d67e9649cfe876cb260454721
             </div>
         </form>
     </div>

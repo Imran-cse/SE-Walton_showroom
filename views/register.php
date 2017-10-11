@@ -1,10 +1,5 @@
 <?php include "../includes/header.php"
-/*
- * Created by PhpStorm.
- * User: imran
- * Date: 8/19/18
- * Time: 12:24 PM
- */
+
 ?>
 
 <body>
@@ -42,7 +37,7 @@
             <div class="form-group">
                 <label for="contact" class="col-md-2 control-label">Contact</label>
                 <div class="col-md-8">
-                    <input id="name" type="number" name="name" value="" class="form-control" required>
+                    <input id="name" type="" name="name" value="" class="form-control" required>
                 </div>
             </div>
             <div align="center">

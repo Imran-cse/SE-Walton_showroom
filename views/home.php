@@ -19,7 +19,7 @@
 				Welcome to Walton Showroom of Khulna.
 			</p>
 			<p style="font-family: 'Copperplate Gothic Bold'; text-align: center; font-size: 20px">
-				The site is under construction so please have patience!!!!
+				The site is under construction, so please have patience!!!!
 			</p>
 		</div>
 		<div class="panel-footer" style="align:bottom;text-align: center">

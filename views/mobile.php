@@ -6,17 +6,26 @@
 	</div>	
 	<div class="container">
 		<div class="row">
+			<?php
+			include_once '../database/connect.php';
+			$sql = "SELECT * FROM products";
+			$result = mysqli_query($con, $sql);
+				while ($value = mysqli_fetch_assoc($result)) { 
+				
+			 ?>
 			<div class="col-md-4">
 				<div class="thumbnail">
-					<a href="../resources/images/NF+.png" target="_blank">
-						<img src="../resources/images/NF+.png" alt="Primo NF+" style="width:256px;height:256px;">
+					<a href="../resources/images/<?php echo $value['image']; ?>" target="_blank">
+						<img src="../resources/images/<?php echo $value['image']; ?>" alt="<?php echo $value['name']; ?>" style="width:256px;height:256px;">
 						<div class="caption" align="center">
-							<p>Walton Primo NF+</p>
+							<p><?php echo $value['name']." (".$value['quantity'].")"; ?></p>
 						</div>
 					</a>
 				</div>
 			</div>
-			<div class="col-md-4">
+	       <?php } ?>
+
+		<!--	<div class="col-md-4">
 				<div class="thumbnail">
 					<a href="../resources/images/walton-primo-r4s.jpg" target="_blank">
 						<img src="../resources/images/walton-primo-r4s.jpg" alt="Walton Primo R4S" style="width:256px;height:256px;">
@@ -35,6 +44,6 @@
 						</div>
 					</a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 </body>
