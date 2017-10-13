@@ -46,6 +46,11 @@ if (isset($_POST['admin_login'])){
 }
 
 ?>
+<script type="text/javascript">
+    function changeColor() {
+        document.getElementById('admin_login').style.backgroundColor = 'green';
+    }
+</script>
 <body>
     <div class="panel col-md-5 col-lg-offset-4" style="border: outset; border-bottom: inset;
     border-right: inset; margin-top: 50px">
@@ -70,7 +75,8 @@ if (isset($_POST['admin_login'])){
                 <input type="submit" name="login" id="login" value="Login" class="btn btn-primary">
             </div>
             <div align="right">
-                <input type="submit" name="admin_login" id="admin_login" value="Admin Login" class="btn btn-primary">
+                <input type="submit" name="admin_login" id="admin_login" onmouseover="changeColor()" value="Admin Login" class="btn
+                ">
             </div>
         </form>
     </div>

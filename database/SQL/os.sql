@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2017 at 05:24 AM
+-- Generation Time: Oct 13, 2017 at 02:29 PM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.19
 
@@ -32,6 +32,13 @@ CREATE TABLE `admin` (
   `password` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `mail` varchar(128) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `name`, `password`, `mail`) VALUES
+(1, 'admin', 'admin', 'admin@admin.com');
 
 -- --------------------------------------------------------
 
@@ -132,6 +139,14 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `name`, `email`, `password`, `address`, `contact`) VALUES
+(5, 'Imran Hossain', 'imran.cse.ku@gmail.com', '211092', '104 Khan Bahadur', 1918765234),
+(6, 'Azoad', 'azoad@gmail.com', 'walindo', 'Khulna', 1913213243);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -190,7 +205,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `category`
 --
@@ -210,7 +225,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- Constraints for dumped tables
 --
