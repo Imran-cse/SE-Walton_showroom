@@ -1,6 +1,6 @@
 <?php include'../includes/header.php'; ?>
 
-<body>
+<body  style="font-family: Open Sans">
 	<div class="container" align="center">
 		<h3>Mobile Zone</h3>
 	</div>	
@@ -8,7 +8,7 @@
 		<div class="row">
 			<?php
 			include_once '../database/connect.php';
-			$sql = "SELECT * FROM products";
+			$sql = "SELECT * FROM products where category_id=5";
 			$result = mysqli_query($con, $sql);
 				while ($value = mysqli_fetch_assoc($result)) { 
 				

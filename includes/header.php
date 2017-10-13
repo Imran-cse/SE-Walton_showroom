@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../resources/style/css/bootstrap-theme.css">
     <link rel="stylesheet" href="../resources/style/fonts/glyphicons-halflings-regular.eot">
     <link rel="stylesheet" href="../resources/style/fonts/glyphicons-halflings-regular.svg">
-    <link href="https://fonts.googleapis.com/css?family=Nosifer|Raleway" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css?family=Nosifer|Raleway" rel="stylesheet">-->
 
     <script src="../resources/style/js/carousel.js"></script>
     <title><?php echo ucfirst(basename($_SERVER['PHP_SELF'],'.php')) ?></title>
@@ -32,7 +33,7 @@
         <ul class="nav navbar-nav">
             <li><a href="../views/home.php"><span class="glyphicon glyphicon-home""></span>Home</a></li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                <a class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="../views/mobile.php">Mobile</a></li>
                     <li><a href="../views/laptop.php">Laptop</a></li>
@@ -43,10 +44,36 @@
             </li>
             <li><a href="../views/about.php"><span class="glyphicon glyphicon-info-sign"></span>About</a></li>
             <li><a href="../views/contact.php"><span class="glyphicon glyphicon-earphone"></span>Contact</a></li>
+            <?php
+            if (isset($_SESSION['admin_id'])){
+                ?>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">Admin Panel <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../admin/controlPanel.php">Control Panel</a></li>
+                        <li><a href="../admin/manageCategory.php">Manage Category</a></li>
+                    </ul>
+                </li>
+            <?php
+            }
+            ?>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="../views/register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="../views/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <?php
+                if (isset($_SESSION['login'])){?>
+                <li><a href="../views/home.php"><span class="glyphicon glyphicon-user"></span><?php echo
+                            $_SESSION['user_name'] ?></a></li>
+                <li><a href="../logout.php" ><span class="glyphicon
+                glyphicon-log-out"></span>
+                        Logout</a></li>
+                    <?php
+                }
+                else { ?>
+                    <li><a href="../views/register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="../views/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+        <?php
+            }
+        ?>
     </div>
 </nav>

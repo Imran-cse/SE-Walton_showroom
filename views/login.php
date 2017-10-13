@@ -1,10 +1,50 @@
-<?php include "../includes/header.php"
-/*
- * Created by PhpStorm.
- * User: imran
- * Date: 28-Aug-17
- * Time: 6:24 PM
- */
+<?php 
+include "../includes/header.php";
+include_once '../database/connect.php';
+
+/*if (isset($_POST['login'])) {
+
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM user WHERE email='$email' AND password='$password'";
+    $result = mysqli_query($con, $sql);
+
+    if ($result) {
+        $value = mysqli_fetch_assoc($result);
+        session_start();
+        $_SESSION['login'] = 'true';
+        $_SESSION['user_id'] = $_POST['email'];
+        $_SESSION['user_name'] = $value['name'];
+        header("Location:home.php");
+    }
+    else{
+        header("Location:login.php");
+    }
+}*/
+
+if (isset($_POST['admin_login'])){
+    echo "logging: admin";
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM admin WHERE email='$email' AND password='$password'";
+    $result = mysqli_query($con, $sql);
+    print_r($result);
+    if ($result){
+        $value = mysqli_fetch_assoc($result);
+        session_start();
+
+        $_SESSION['login'] = 'true';
+        $_SESSION['admin_id'] = $_POST['email'];
+        $_SESSION['admin_name'] = $value['name'];
+        header("Location:home.php");
+    }
+    else{
+        header("Location:login.php");
+    }
+}
+
 ?>
 <body>
     <div class="panel col-md-5 col-lg-offset-4" style="border: outset; border-bottom: inset;
@@ -13,7 +53,7 @@
         <h3>Login</h3>
     </div>
     <div class="panel-body">
-        <form action="" method="post" class="form-horizontal">
+        <form action="login.php" method="post" class="form-horizontal">
             <div class="form-group">
                 <label for="email" class="col-md-2 control-label">Email</label>
                 <div class="col-md-7">
@@ -26,8 +66,11 @@
                     <input type="password" name="password" class="form-control" id="password" required>
                 </div>
             </div>
-            <div align="left">
-                <input type="button" id="login" value="Login" class="btn btn-primary">
+            <div align="left" class="col-md-2">
+                <input type="submit" name="login" id="login" value="Login" class="btn btn-primary">
+            </div>
+            <div align="right">
+                <input type="submit" name="admin_login" id="admin_login" value="Admin Login" class="btn btn-primary">
             </div>
         </form>
     </div>

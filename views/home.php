@@ -6,10 +6,10 @@
 		<div class="c-carousel__arrow c-carousel__arrow--left"></div>
 		<div class="c-carousel__arrow c-carousel__arrow--right"></div>
 		<ul class="c-carousel__slides">
-			<li><img src="../resources/images/imageedit_2_4647071428.jpg"/></li>
-			<li><img src="../resources/images/imageedit_4_5929328933.jpg" /></li>
-			<li><img src="../resources/images/imageedit_6_7091798663.jpg" /></li>
-			<li><img src="../resources/images/imageedit_8_2972809426.jpg" /></li>
+			<li><img src="../resources/images/carousel/imageedit_2_4647071428.jpg"/></li>
+			<li><img src="../resources/images/carousel/imageedit_4_5929328933.jpg" /></li>
+			<li><img src="../resources/images/carousel/imageedit_6_7091798663.jpg" /></li>
+			<li><img src="../resources/images/carousel/imageedit_8_2972809426.jpg" /></li>
 
 		</ul>
 	</div>
