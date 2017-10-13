@@ -2,7 +2,7 @@
 include "../includes/header.php";
 include_once '../database/connect.php';
 
-/*if (isset($_POST['login'])) {
+if (isset($_POST['login'])) {
 
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -21,23 +21,23 @@ include_once '../database/connect.php';
     else{
         header("Location:login.php");
     }
-}*/
+}
 
 if (isset($_POST['admin_login'])){
-    echo "logging: admin";
+    
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM admin WHERE email='$email' AND password='$password'";
+    $sql = "SELECT * FROM admin WHERE mail='$email' AND password='$password'";
     $result = mysqli_query($con, $sql);
-    print_r($result);
+    
     if ($result){
         $value = mysqli_fetch_assoc($result);
         session_start();
 
         $_SESSION['login'] = 'true';
         $_SESSION['admin_id'] = $_POST['email'];
-        $_SESSION['admin_name'] = $value['name'];
+        $_SESSION['user_name'] = $value['name'];
         header("Location:home.php");
     }
     else{
