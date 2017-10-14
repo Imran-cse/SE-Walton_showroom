@@ -22,12 +22,18 @@
 				The site is under construction, so please have patience!!!!
 			</p>
 		</div>
-		<div class="panel-footer" style="align:bottom;text-align: center">
+<!--		<div class="panel-footer" style="align:bottom;text-align: center">
 			<p style="color: black">
 				copyright Walton Bangladesh Limited @2017
 			</p>    
 		</div>
+-->	</div>
+<div class="navbar navbar-fixed-bottom" style="background:  #ebebe0;float: none;display: inline-block;text-align: center;"> 
+	<div class="container">
+			<div class="navbar-text center" style="float: none;">
+			<p>&copy; Walton Bangladesh Limited 2017</p>
+		</div>
 	</div>
-
+</div>
 </body>
 </html>
