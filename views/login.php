@@ -76,8 +76,7 @@ if (isset($_POST['admin_login'])){
                 <input type="submit" name="login" id="login" value="Login" class="btn btn-primary">
             </div>
             <div align="right">
-                <input type="submit" name="admin_login" id="admin_login" onmouseover="changeColor()" value="Admin Login" class="btn
-                ">
+                <input type="submit" name="admin_login" id="admin_login" onmouseover="changeColor()" value="Admin Login" class="btn">
             </div>
         </form>
     </div>
@@ -88,7 +87,7 @@ if (isset($_POST['admin_login'])){
 <div class="navbar navbar-fixed-bottom" style="background:  #ebebe0;float: none;display: inline-block;text-align: center;"> 
     <div class="container">
             <div class="navbar-text center" style="float: none;">
-            <p>&copy; walton Bangladesh Limited 2017</p>
+            <p>&copy; Walton Bangladesh Limited 2017</p>
         </div>
     </div>
 </div>
