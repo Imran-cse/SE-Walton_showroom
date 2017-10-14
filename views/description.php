@@ -27,20 +27,20 @@ include "../includes/header.php";
 					<h4><strong>Quantity: </strong><?php echo $value['quantity']; ?></h4>
 					<p><strong>About: </strong><?php if ($value['description'] == null){echo 'Sorry! No description for this product.';} else {echo $value['description'];}?></p>
 					<p><a class="nounderline" onclick="show()" style="text-decoration: none !important;">Give Feedback about this product</a></p>
+					<script>
+						function show() {
+							var x = document.getElementById("feedback");
+							if (x.className == "unhidden") {
+								x.className = "hidden";
+							} else {
+								x.className = "unhidden";
+							}
+						}
+					</script>
 					<div class="form-group hidden" id="feedback">
 						<label for="comment">Feedback:</label>
 						<textarea class="form-control" rows="5" id="comment" style="resize: none;"></textarea>
 					</div>
-					<script>
-						function show() {
-							var x = document.getElementById("feedback");
-							if (x.className == 'hidden') {
-								x.className = "unhidden";
-							} else {
-								x.className = "hidden";
-							}
-						}
-					</script>
 				</div>
 				<?php }
 		}
