@@ -5,23 +5,34 @@
 	</div>	
 	<div class="container">
 		<div class="row">
-		<?php
+			<?php
 			include_once '../database/connect.php';
 			$sql = "SELECT * FROM products where category_id=4";
 			$result = mysqli_query($con, $sql);
-				while ($value = mysqli_fetch_assoc($result)) { 
+			while ($value = mysqli_fetch_assoc($result)) { 
 				
-			 ?>
-			<div class="col-md-4">
-				<div class="thumbnail">
-					<a href="../resources/images/<?php echo $value['image']; ?>" target="_blank">
-						<img src="../resources/images/<?php echo $value['image']; ?>" alt="<?php echo $value['name']; ?>" style="width:256px;height:256px;">
-						<div class="caption" align="center">
-							<p><?php echo $value['name']." (".$value['quantity'].")"; ?></p>
-						</div>
-					</a>
+				?>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<a href="../resources/images/<?php echo $value['image']; ?>" target="_blank">
+							<img src="../resources/images/<?php echo $value['image']; ?>" alt="<?php echo $value['name']; ?>" style="width:256px;height:256px;">
+							<div class="caption" align="center">
+								<p><?php echo $value['name']." (".$value['quantity'].")"; ?></p>
+							</div>
+						</a>
+					</div>
 				</div>
-			</div>
-			<?php } ?>
+				<?php } ?>
 		</div>
+	</div>
+	<div>
+		<br><br><br>
+	</div>
+<div class="navbar navbar-fixed-bottom" style="background:  #ebebe0;float: none;display: inline-block;text-align: center;"> 
+	<div class="container">
+		<div class="navbar-text center" style="float: none;">
+			<p>&copy; Walton Bangladesh Limited 2017</p>
+		</div>
+	</div>
+</div>
 </body>

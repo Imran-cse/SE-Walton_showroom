@@ -52,6 +52,7 @@ if (isset($_POST['admin_login'])){
     }
 </script>
 <body>
+    <div class="form-control">
     <div class="panel col-md-5 col-lg-offset-4" style="border: outset; border-bottom: inset;
     border-right: inset; margin-top: 50px">
     <div class="panel-heading">
@@ -81,10 +82,15 @@ if (isset($_POST['admin_login'])){
         </form>
     </div>
 </div>
-<div class="panel-footer" style="position: absolute;bottom: 0;width: 100%;text-align: center;">
-    <p style="color: black">
-        copyright Walton Bangladesh Limited @2017
-    </p>    
+<div>
+    <br><br><br>
+</div>
+<div class="navbar navbar-fixed-bottom" style="background:  #ebebe0;float: none;display: inline-block;text-align: center;"> 
+    <div class="container">
+            <div class="navbar-text center" style="float: none;">
+            <p>&copy; walton Bangladesh Limited 2017</p>
+        </div>
+    </div>
 </div>
 </body>
 </html>

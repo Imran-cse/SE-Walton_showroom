@@ -9,9 +9,14 @@
 			<p class="text-danger">Customer Care No: 01XXXXXXXX</p>
 		</div>
 	</div>
-	<div class="panel-footer" style="position: absolute;bottom: 0;width: 100%;text-align: center;">
-    	<p style="color: black">
-        	copyright Walton Bangladesh Limited @2017
-    	</p>    
-	</div>
+	<div>
+    <br><br><br>
+</div>
+<div class="navbar navbar-fixed-bottom" style="background:  #ebebe0;float: none;display: inline-block;text-align: center;"> 
+    <div class="container">
+            <div class="navbar-text center" style="float: none;">
+            <p>&copy; Walton Bangladesh Limited 2017</p>
+        </div>
+    </div>
+</div>
 </body>
