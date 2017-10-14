@@ -1,0 +1,412 @@
+/**
+ * @package IcoFont by ShapeBootstrap - https://shapebootstrap.net
+ * @version 1.0.0 Beta
+ * @author IcoFont http://icofont.com
+ * @copyright Copyright (c) 2017 IcoFont
+ * @license - http://icofont.com/license/
+*/
+
+@font-face {
+    font-family: 'icofont';
+    src: url('../fonts/icofont.eot?v=1.0.0-beta');
+    src: url('../fonts/icofont.eot?v=1.0.0-beta#iefix') format('embedded-opentype'),
+    url('../fonts/icofont.ttf?v=1.0.0-beta') format('truetype'),
+    url('../fonts/icofont.woff?v=1.0.0-beta') format('woff'),
+    url('../fonts/icofont.svg?v=1.0.0-beta#icofont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icofont {
+    font-family: 'IcoFont' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icofont-cur-afghani-false:before {
+	content: "\ea92";
+}
+.icofont-cur-afghani-minus:before {
+	content: "\ea93";
+}
+.icofont-cur-afghani-plus:before {
+	content: "\ea94";
+}
+.icofont-cur-afghani-true:before {
+	content: "\ea95";
+}
+.icofont-cur-afghani:before {
+	content: "\ea96";
+}
+.icofont-cur-baht-false:before {
+	content: "\ea97";
+}
+.icofont-cur-baht-minus:before {
+	content: "\ea98";
+}
+.icofont-cur-baht-plus:before {
+	content: "\ea99";
+}
+.icofont-cur-baht-true:before {
+	content: "\ea9a";
+}
+.icofont-cur-baht:before {
+	content: "\ea9b";
+}
+.icofont-cur-bitcoin-false:before {
+	content: "\ea9c";
+}
+.icofont-cur-bitcoin-minus:before {
+	content: "\ea9d";
+}
+.icofont-cur-bitcoin-plus:before {
+	content: "\ea9e";
+}
+.icofont-cur-bitcoin-true:before {
+	content: "\ea9f";
+}
+.icofont-cur-bitcoin:before {
+	content: "\eaa0";
+}
+.icofont-cur-dollar-flase:before {
+	content: "\eaa1";
+}
+.icofont-cur-dollar-minus:before {
+	content: "\eaa2";
+}
+.icofont-cur-dollar-plus:before {
+	content: "\eaa3";
+}
+.icofont-cur-dollar-true:before {
+	content: "\eaa4";
+}
+.icofont-cur-dollar:before {
+	content: "\eaa5";
+}
+.icofont-cur-dong-false:before {
+	content: "\eaa6";
+}
+.icofont-cur-dong-minus:before {
+	content: "\eaa7";
+}
+.icofont-cur-dong-plus:before {
+	content: "\eaa8";
+}
+.icofont-cur-dong-true:before {
+	content: "\eaa9";
+}
+.icofont-cur-dong:before {
+	content: "\eaaa";
+}
+.icofont-cur-euro-false:before {
+	content: "\eaab";
+}
+.icofont-cur-euro-minus:before {
+	content: "\eaac";
+}
+.icofont-cur-euro-plus:before {
+	content: "\eaad";
+}
+.icofont-cur-euro-true:before {
+	content: "\eaae";
+}
+.icofont-cur-euro:before {
+	content: "\eaaf";
+}
+.icofont-cur-frank-false:before {
+	content: "\eab0";
+}
+.icofont-cur-frank-minus:before {
+	content: "\eab1";
+}
+.icofont-cur-frank-plus:before {
+	content: "\eab2";
+}
+.icofont-cur-frank-true:before {
+	content: "\eab3";
+}
+.icofont-cur-frank:before {
+	content: "\eab4";
+}
+.icofont-cur-hryvnia-false:before {
+	content: "\eab5";
+}
+.icofont-cur-hryvnia-minus:before {
+	content: "\eab6";
+}
+.icofont-cur-hryvnia-plus:before {
+	content: "\eab7";
+}
+.icofont-cur-hryvnia-true:before {
+	content: "\eab8";
+}
+.icofont-cur-hryvnia:before {
+	content: "\eab9";
+}
+.icofont-cur-lira-false:before {
+	content: "\eaba";
+}
+.icofont-cur-lira-minus:before {
+	content: "\eabb";
+}
+.icofont-cur-lira-plus:before {
+	content: "\eabc";
+}
+.icofont-cur-lira-true:before {
+	content: "\eabd";
+}
+.icofont-cur-lira:before {
+	content: "\eabe";
+}
+.icofont-cur-peseta-false:before {
+	content: "\eabf";
+}
+.icofont-cur-peseta-minus:before {
+	content: "\eac0";
+}
+.icofont-cur-peseta-plus:before {
+	content: "\eac1";
+}
+.icofont-cur-peseta-true:before {
+	content: "\eac2";
+}
+.icofont-cur-peseta:before {
+	content: "\eac3";
+}
+.icofont-cur-peso-false:before {
+	content: "\eac4";
+}
+.icofont-cur-peso-minus:before {
+	content: "\eac5";
+}
+.icofont-cur-peso-plus:before {
+	content: "\eac6";
+}
+.icofont-cur-peso-true:before {
+	content: "\eac7";
+}
+.icofont-cur-peso:before {
+	content: "\eac8";
+}
+.icofont-cur-pound-false:before {
+	content: "\eac9";
+}
+.icofont-cur-pound-minus:before {
+	content: "\eaca";
+}
+.icofont-cur-pound-plus:before {
+	content: "\eacb";
+}
+.icofont-cur-pound-true:before {
+	content: "\eacc";
+}
+.icofont-cur-pound:before {
+	content: "\eacd";
+}
+.icofont-cur-renminbi-false:before {
+	content: "\eace";
+}
+.icofont-cur-renminbi-minus:before {
+	content: "\eacf";
+}
+.icofont-cur-renminbi-plus:before {
+	content: "\ead0";
+}
+.icofont-cur-renminbi-true:before {
+	content: "\ead1";
+}
+.icofont-cur-renminbi:before {
+	content: "\ead2";
+}
+.icofont-cur-riyal-false:before {
+	content: "\ead3";
+}
+.icofont-cur-riyal-minus:before {
+	content: "\ead4";
+}
+.icofont-cur-riyal-plus:before {
+	content: "\ead5";
+}
+.icofont-cur-riyal-true:before {
+	content: "\ead6";
+}
+.icofont-cur-riyal:before {
+	content: "\ead7";
+}
+.icofont-cur-rouble-false:before {
+	content: "\ead8";
+}
+.icofont-cur-rouble-minus:before {
+	content: "\ead9";
+}
+.icofont-cur-rouble-plus:before {
+	content: "\eada";
+}
+.icofont-cur-rouble-true:before {
+	content: "\eadb";
+}
+.icofont-cur-rouble:before {
+	content: "\eadc";
+}
+.icofont-cur-rupee-false:before {
+	content: "\eadd";
+}
+.icofont-cur-rupee-minus:before {
+	content: "\eade";
+}
+.icofont-cur-rupee-plus:before {
+	content: "\eadf";
+}
+.icofont-cur-rupee-true:before {
+	content: "\eae0";
+}
+.icofont-cur-rupee:before {
+	content: "\eae1";
+}
+.icofont-cur-taka-false:before {
+	content: "\eae2";
+}
+.icofont-cur-taka-minus:before {
+	content: "\eae3";
+}
+.icofont-cur-taka-plus:before {
+	content: "\eae4";
+}
+.icofont-cur-taka-true:before {
+	content: "\eae5";
+}
+.icofont-cur-taka:before {
+	content: "\eae6";
+}
+.icofont-cur-turkish-lira-false:before {
+	content: "\eae7";
+}
+.icofont-cur-turkish-lira-minus:before {
+	content: "\eae8";
+}
+.icofont-cur-turkish-lira-plus:before {
+	content: "\eae9";
+}
+.icofont-cur-turkish-lira-true:before {
+	content: "\eaea";
+}
+.icofont-cur-turkish-lira:before {
+	content: "\eaeb";
+}
+.icofont-cur-won-false:before {
+	content: "\eaec";
+}
+.icofont-cur-won-minus:before {
+	content: "\eaed";
+}
+.icofont-cur-won-plus:before {
+	content: "\eaee";
+}
+.icofont-cur-won-true:before {
+	content: "\eaef";
+}
+.icofont-cur-won:before {
+	content: "\eaf0";
+}
+.icofont-cur-yen-false:before {
+	content: "\eaf1";
+}
+.icofont-cur-yen-minus:before {
+	content: "\eaf2";
+}
+.icofont-cur-yen-plus:before {
+	content: "\eaf3";
+}
+.icofont-cur-yen-true:before {
+	content: "\eaf4";
+}
+.icofont-cur-yen:before {
+	content: "\eaf5";
+}
+
+/*Font size*/
+.icofont-lg {
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%
+}
+
+.icofont-2x {
+    font-size: 2em
+}
+
+.icofont-3x {
+    font-size: 3em
+}
+
+.icofont-4x {
+    font-size: 4em
+}
+
+.icofont-5x {
+    font-size: 5em
+}
+
+.icofont-fw {
+    display: inline-block;
+    width: 1.28571429em;
+    text-align: center
+}
+
+/*Fixed Width Icons*/
+.icofont-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+/*Custom list icons*/
+.icofont-ul {
+    padding-left: 0;
+    margin-left: 2.14285714em;
+    list-style-type: none;
+}
+.icofont-ul>li {
+    position: relative;
+}
+.icofont-li {
+    position: absolute;
+    left: -2.14285714em;
+    width: 2.14285714em;
+    top: .14285714em;
+    text-align: center;
+}
+
+/*Animation*/
+.icofont-rotate {
+    -webkit-animation: icofont-rotate 2s infinite linear;
+    animation: icofont-rotate 2s infinite linear
+}
+
+@-webkit-keyframes icofont-rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes icofont-rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}

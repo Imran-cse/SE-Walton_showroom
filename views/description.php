@@ -21,9 +21,10 @@ include "../includes/header.php";
 					</div>
 				</div>
 				<div class="col-md-4 col-md-offset-1">
-					<p><strong>Name: </strong><?php echo $value['name']; ?></p>
-					<p><strong>Price: </strong><?php echo $value['price']; ?></p>
-					<p><strong>Quantity: </strong><?php echo $value['quantity']; ?></p>
+					<!-- <p><strong>Name: </strong></p> -->
+					<h2><?php echo $value['name']; ?></h2>
+					<h2><?php echo $value['price']; ?><i class="icofont icofont-cur-taka"></i></h2>
+					<h4><strong>Quantity: </strong><?php echo $value['quantity']; ?></h4>
 					<p><strong>About: </strong><?php if ($value['description'] == null){echo 'Sorry! No description for this product.';} ?></p>
 				</div>
 				<?php }

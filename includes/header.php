@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../resources/style/fonts/glyphicons-halflings-regular.eot">
     <link rel="stylesheet" href="../resources/style/fonts/glyphicons-halflings-regular.svg">
     <!--    <link href="https://fonts.googleapis.com/css?family=Nosifer|Raleway" rel="stylesheet">-->
-
+    <link rel="stylesheet" type="text/css" href="../resources/icofont/css/icofont.css">
     <script src="../resources/style/js/carousel.js"></script>
     <title><?php echo ucfirst(basename($_SERVER['PHP_SELF'],'.php')) ?></title>
 </head>
