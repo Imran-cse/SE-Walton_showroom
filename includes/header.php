@@ -9,20 +9,20 @@
     <link rel="stylesheet" type="text/css" href="../resources/style/css/bootstrap-theme.css">
     <link rel="stylesheet" href="../resources/style/fonts/glyphicons-halflings-regular.eot">
     <link rel="stylesheet" href="../resources/style/fonts/glyphicons-halflings-regular.svg">
-<!--    <link href="https://fonts.googleapis.com/css?family=Nosifer|Raleway" rel="stylesheet">-->
+    <!--    <link href="https://fonts.googleapis.com/css?family=Nosifer|Raleway" rel="stylesheet">-->
 
     <script src="../resources/style/js/carousel.js"></script>
     <title><?php echo ucfirst(basename($_SERVER['PHP_SELF'],'.php')) ?></title>
 </head>
 
 <style>
-    li.dropdown:hover > .dropdown-menu {
-        display: inline-block;
-        border: inherit;
-        font: inherit;
-        font-size: inherit;
-        text-decoration-color: yellow;
-    }
+li.dropdown:hover > .dropdown-menu {
+    display: inline-block;
+    border: inherit;
+    font: inherit;
+    font-size: inherit;
+    text-decoration-color: yellow;
+}
 </style>
 
 <nav class="navbar nav-tabs" style="border-bottom: inset;">
@@ -35,9 +35,9 @@
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="../views/mobile.php">Mobile</a></li>
-                    <li><a href="../views/laptop.php">Laptop</a></li>
-                    <li><a href="../views/television.php">Television</a></li>
+                    <li><a href="../views/mobile.php?category_id=5">Mobile</a></li>
+                    <li><a href="../views/laptop.php?category_id=4">Laptop</a></li>
+                    <li><a href="../views/television.php?category_id=6">Television</a></li>
                     <li><a href="#">Home Appliances</a></li>
                     <li><a href="#">Electrical Appliances</a></li>
                 </ul>
@@ -54,26 +54,26 @@
                         <li><a href="../admin/manageCategory.php">Manage Category</a></li>
                     </ul>
                 </li>
-            <?php
+                <?php
             }
             ?>
         </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <?php
-                if (isset($_SESSION['login'])){?>
-                <li><a href="../views/home.php"><span class="glyphicon glyphicon-user"></span><?php echo
-                            $_SESSION['user_name'] ?></a></li>
-                <li><a href="../logout.php" ><span class="glyphicon
+        <ul class="nav navbar-nav navbar-right">
+            <?php
+            if (isset($_SESSION['login'])){?>
+            <li><a href="../views/home.php"><span class="glyphicon glyphicon-user"></span><?php echo
+            $_SESSION['user_name'] ?></a></li>
+            <li><a href="../logout.php" ><span class="glyphicon
                 glyphicon-log-out"></span>
-                        Logout</a></li>
-                    <?php
-                }
-                else { ?>
-                    <li><a href="../views/register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="../views/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                </ul>
-        <?php
-            }
-        ?>
-    </div>
+            Logout</a></li>
+            <?php
+        }
+        else { ?>
+        <li><a href="../views/register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="../views/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+    <?php
+}
+?>
+</div>
 </nav>
