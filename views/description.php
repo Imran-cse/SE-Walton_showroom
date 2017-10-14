@@ -1,7 +1,7 @@
 <?php
 include "../includes/header.php"; 
 ?>
-<body>
+<body style="font-family: Open Sans Light">
 	<div class="container-fluid">
 		<?php
 		$cid = $_GET['category_id'];
