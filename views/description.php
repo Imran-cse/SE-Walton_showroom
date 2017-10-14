@@ -31,6 +31,11 @@ include "../includes/header.php";
 		}
 		?>
 	</div>
+	<div class="container-fluid">
+		<div class="col-md-4 col-md-offset-2" align="center">
+			<a class="nounderline" style="text-decoration: none" href="#">Add to Wishlist <span class="glyphicon glyphicon-heart"></span></a>
+		</div>
+	</div>
 	<div>
 		<br><br><br>
 	</div>
