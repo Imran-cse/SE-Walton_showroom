@@ -63,6 +63,7 @@ li.dropdown:hover > .dropdown-menu {
             if (isset($_SESSION['login'])){?>
             <li><a href="../views/home.php"><span class="glyphicon glyphicon-user"></span><?php echo
             $_SESSION['user_name'] ?></a></li>
+            <li><a href="#"><i class="icofont icofont-ui-cart"></i>&#xed24;</a></li>
             <li><a href="../logout.php" ><span class="glyphicon
                 glyphicon-log-out"></span>
             Logout</a></li>
