@@ -25,11 +25,31 @@ include "../includes/header.php";
 					<h2><?php echo $value['name']; ?></h2>
 					<h2><?php echo $value['price']; ?><i class="icofont" >&#xeae6;</i></h2>
 					<h4><strong>Quantity: </strong><?php echo $value['quantity']; ?></h4>
-					<p><strong>About: </strong><?php if ($value['description'] == null){echo 'Sorry! No description for this product.';} ?></p>
+					<p><strong>About: </strong><?php if ($value['description'] == null){echo 'Sorry! No description for this product.';} else {echo $value['description'];}?></p>
+					<p><a class="nounderline" onclick="show()" style="text-decoration: none !important;">Give Feedback about this product</a></p>
+					<script>
+						function show() {
+							var x = document.getElementById("feedback");
+							if (x.className == "unhidden") {
+								x.className = "hidden";
+							} else {
+								x.className = "unhidden";
+							}
+						}
+					</script>
+					<div class="form-group hidden" id="feedback">
+						<label for="comment">Feedback:</label>
+						<textarea class="form-control" rows="5" id="comment" style="resize: none;"></textarea>
+					</div>
 				</div>
 				<?php }
 		}
 		?>
+	</div>
+	<div class="container-fluid">
+		<div class="col-md-4 col-md-offset-2" align="center">
+			<a class="nounderline" style="text-decoration: none" href="#">Add to Wishlist <span class="glyphicon glyphicon-heart"></span></a>
+		</div>
 	</div>
 	<div>
 		<br><br><br>
