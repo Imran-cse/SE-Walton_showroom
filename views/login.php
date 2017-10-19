@@ -2,25 +2,32 @@
 include "../includes/header.php";
 include_once '../database/connect.php';
 
+if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
+
 if (isset($_POST['login'])) {
 
     $email = $_POST['email'];
     $password = $_POST['password'];
-
+    $password = md5($password);
     $sql = "SELECT * FROM user WHERE email='$email' AND password='$password'";
-    $result = mysqli_query($con, $sql);
+    $result = mysqli_query($con, $sql) or die(mysqli_error($con));
 
-    if ($result) {
+    if($result->num_rows < 1){
+        //header("Location: login.php");
+        echo "not valid";
+    }
+    else {
         $value = mysqli_fetch_assoc($result);
-        session_start();
+        
         $_SESSION['login'] = 'true';
         $_SESSION['user_id'] = $_POST['email'];
+        $_SESSION['u_id'] = $value['id'];
         $_SESSION['user_name'] = $value['name'];
         header("Location:home.php");
     }
-    else{
-        header("Location:login.php");
-    }
+
 }
 
 if (isset($_POST['admin_login'])){
@@ -46,11 +53,7 @@ if (isset($_POST['admin_login'])){
 }
 
 ?>
-<script type="text/javascript">
-    function changeColor() {
-        document.getElementById('admin_login').style.backgroundColor = 'green';
-    }
-</script>
+
 <body>
     <div class="form-control">
     <div class="panel col-md-5 col-lg-offset-4" style="border: outset; border-bottom: inset;
@@ -76,7 +79,7 @@ if (isset($_POST['admin_login'])){
                 <input type="submit" name="login" id="login" value="Login" class="btn btn-primary">
             </div>
             <div align="right">
-                <input type="submit" name="admin_login" id="admin_login" onmouseover="changeColor()" value="Admin Login" class="btn">
+                <input type="submit" name="admin_login" id="admin_login" value="Admin Login" class="btn">
             </div>
         </form>
     </div>

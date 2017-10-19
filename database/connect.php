@@ -2,8 +2,8 @@
 
 define('SERVER', 'localhost');
 define('USER', 'root');
-define('PASSWORD','');
-define('DBNAME', 'sms');
+define('PASSWORD','2110');
+define('DBNAME', 'os');
 
 $con = mysqli_connect(SERVER, USER, PASSWORD, DBNAME);
 

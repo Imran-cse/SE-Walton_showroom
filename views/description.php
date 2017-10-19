@@ -1,8 +1,20 @@
 <?php
-include "../includes/header.php"; 
+include "../includes/header.php";
+include_once "../database/connect.php";
+
+if (isset($_POST['save'])){
+    $u_id = $_SESSION['u_id'];
+    $p_id = $_GET['product_id'];
+    $fd = $_POST['feed'];
+
+    $sql = "INSERT INTO feedback(user_id, product_id, feedback) VALUES ('$u_id', '$p_id', '$fd')";
+    $f_res = mysqli_query($con, $sql);
+}
+
 ?>
 <body style="font-family: Open Sans Light">
 	<div class="container-fluid">
+        <form action="" method="post">
 		<?php
 		$cid = $_GET['category_id'];
 		$id = $_GET['product_id'];
@@ -18,6 +30,7 @@ include "../includes/header.php";
 						<a href="../resources/images/<?php echo $value['image']; ?>" target="_blank">
 							<img src="../resources/images/<?php echo $value['image']; ?>" alt="<?php echo $value['name']; ?>" style="width:350px;height:350px;">
 						</a>
+                        <a class="nounderline" style="text-decoration: none" href="#">Add to Wishlist <span class="glyphicon glyphicon-heart"></span></a>
 					</div>
 				</div>
 				<div class="col-md-4 col-md-offset-1">
@@ -37,19 +50,17 @@ include "../includes/header.php";
 							}
 						}
 					</script>
+                    <?php if (isset($_SESSION['user_id'])){ ?>
 					<div class="form-group hidden" id="feedback">
 						<label for="comment">Feedback:</label>
-						<textarea class="form-control" rows="5" id="comment" style="resize: none;"></textarea>
+						<textarea class="form-control" name="feed" rows="5" id="comment" style="resize: none;"></textarea>
+                        <input type="submit" class="btn btn-primary" name="save" value="Submit">
 					</div>
 				</div>
-				<?php }
+				<?php } }
 		}
 		?>
-	</div>
-	<div class="container-fluid">
-		<div class="col-md-4 col-md-offset-2" align="center">
-			<a class="nounderline" style="text-decoration: none" href="#">Add to Wishlist <span class="glyphicon glyphicon-heart"></span></a>
-		</div>
+        </form>
 	</div>
 	<div>
 		<br><br><br>
