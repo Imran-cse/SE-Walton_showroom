@@ -8,17 +8,16 @@ include "../includes/header.php";
 	<div class="container">
 		<div class="row">
 			<?php
-			$search = $_POST['search'];
-			if(isset($_POST['search']))
-			{
-				include_once '../database/connect.php';
-			$sql = "SELECT * FROM products WHERE name LIKE '%$search%'";
-			$result = mysqli_query($con, $sql);
-			if ($result){
-				while ($value = mysqli_fetch_assoc($result)) { 
-				
-				?>
-				<div class="col-md-4">
+			if(isset($_POST['search'])){
+				$search = $_POST['search'];
+				if ($search!=null)
+				{
+					include_once '../database/connect.php';
+					$sql = "SELECT * FROM products WHERE name LIKE '%$search%'";
+					$result = mysqli_query($con, $sql);
+					if ($result!=null){
+						while ($value = mysqli_fetch_assoc($result)){ ?>
+						<div class="col-md-4">
 					<div class="thumbnail">
 						<a href="../views/description.php?category_id=<?php echo $value['category_id'];?>&&product_id=<?php echo $value['id']; ?>" target="_self">
 							<img src="../resources/images/<?php echo $value['image']; ?>" alt="<?php echo $value['name']; ?>" style="width:256px;height:256px;">
@@ -27,12 +26,13 @@ include "../includes/header.php";
 							</div>
 						</a>
 					</div>
-				</div>
-				<?php }
-			}
-			}
-			else echo "Try Different KeyWords";
-			?>
+				</div>	
+					<?php }
+					}
+					else echo "Try Different Keyword";
+				}
+				else echo "Please Enter Some Text";
+			}?>
 		</div>
 	</div>
 	<div>
