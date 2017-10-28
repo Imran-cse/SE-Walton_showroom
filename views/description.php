@@ -30,7 +30,7 @@ if (isset($_POST['save'])){
 						<a href="../resources/images/<?php echo $value['image']; ?>" target="_blank">
 							<img src="../resources/images/<?php echo $value['image']; ?>" alt="<?php echo $value['name']; ?>" style="width:350px;height:350px;">
 						</a>
-                        <a class="nounderline" style="text-decoration: none" href="#">Add to Wishlist <span class="glyphicon glyphicon-heart"></span></a>
+                        <button class="btn btn-link nounderline" style="text-decoration: none" type="submit" name="wishlist" id="wishlist">Add to Wishlist <span class="glyphicon glyphicon-heart"></span></button>
 					</div>
 				</div>
 				<div class="col-md-4 col-md-offset-1">

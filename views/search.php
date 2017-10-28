@@ -15,7 +15,7 @@ include "../includes/header.php";
 					include_once '../database/connect.php';
 					$sql = "SELECT * FROM products WHERE name LIKE '%$search%'";
 					$result = mysqli_query($con, $sql);
-					if ($result!=null){
+					if ($result){
 						while ($value = mysqli_fetch_assoc($result)){ ?>
 						<div class="col-md-4">
 					<div class="thumbnail">
@@ -29,7 +29,7 @@ include "../includes/header.php";
 				</div>	
 					<?php }
 					}
-					else echo "Try Different Keyword";
+					elseif ($result==0) echo "Try Different Keyword";
 				}
 				else echo "Please Enter Some Text";
 			}?>

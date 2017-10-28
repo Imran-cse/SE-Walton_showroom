@@ -25,6 +25,7 @@ $result = mysqli_query($con, $sql);
                 <th>Product Name</th>
                 <th>Price</th>
                 <th>Quantity</th>
+                <th>Edit</th>
                 <th>Delete</th>
             </tr>
             <?php
@@ -35,7 +36,8 @@ $result = mysqli_query($con, $sql);
                         <td><?php echo $value['name'] ?></td>
                         <td><?php echo $value['price'] ?></td>
                         <td><?php echo $value['quantity'] ?></td>
-                        <td><a href="?del_pro=<?php echo $value['id'] ?>">Delete</a></td>
+                        <td><a href="../admin/updateProducts.php?edit_pro=<?php echo $value['id'] ?>">Edit <span class="glyphicon glyphicon-edit"></span></a></td>
+                        <td><a href="?del_pro=<?php echo $value['id'] ?>">Delete <span class="glyphicon glyphicon-trash"></span></a></td>
                     </tr>
                     <?php
                 }
