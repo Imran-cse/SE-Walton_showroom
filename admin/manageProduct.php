@@ -25,6 +25,7 @@ $result = mysqli_query($con, $sql);
                 <th>Product Name</th>
                 <th>Price</th>
                 <th>Quantity</th>
+                <th>Edit</th>
                 <th>Delete</th>
             </tr>
             <?php
@@ -35,7 +36,9 @@ $result = mysqli_query($con, $sql);
                         <td><?php echo $value['name'] ?></td>
                         <td><?php echo $value['price'] ?></td>
                         <td><?php echo $value['quantity'] ?></td>
-                        <td><a href="?del_pro=<?php echo $value['id'] ?>">Delete</a></td>
+                        <td><a href="?edit_id=<?php echo $value['id']?>" data-toggle="modal"
+                                data-target="#myModal"><span class="glyphicon glyphicon-edit"></span></a></td>
+                        <td><a href="?del_pro=<?php echo $value['id'] ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
                     </tr>
                     <?php
                 }
@@ -43,5 +46,6 @@ $result = mysqli_query($con, $sql);
             ?>
         </table>
     </form>
+
 </div>
 </body>

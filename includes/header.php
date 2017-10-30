@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="../resources/style/css/bootstrap-theme.css">
     <link rel="stylesheet" href="../resources/style/fonts/glyphicons-halflings-regular.eot">
     <link rel="stylesheet" href="../resources/style/fonts/glyphicons-halflings-regular.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--    <link href="https://fonts.googleapis.com/css?family=Nosifer|Raleway" rel="stylesheet">-->
     <link rel="stylesheet" type="text/css" href="../resources/icofont/css/icofont.css">
     <script src="../resources/style/js/carousel.js"></script>

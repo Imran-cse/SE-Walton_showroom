@@ -40,7 +40,6 @@ if (isset($_POST['admin_login'])){
     
     if ($result){
         $value = mysqli_fetch_assoc($result);
-        session_start();
 
         $_SESSION['login'] = 'true';
         $_SESSION['admin_id'] = $_POST['email'];
