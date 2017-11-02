@@ -20,7 +20,7 @@ $result = mysqli_query($con, $sql);
 <body>
 	<div class="container-fluid">
         <form action="manageUser.php" method="get">
-            <table class="table table-bordered">
+            <table class="table table-bordered table-hover table-striped">
                 <tr>
                     <th>Name</th>
                     <th>Email</th>

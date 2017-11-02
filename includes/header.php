@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../resources/style/fonts/glyphicons-halflings-regular.svg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!--    <link href="https://fonts.googleapis.com/css?family=Nosifer|Raleway" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../resources/icofont/css/icofont.css">
     <script src="../resources/style/js/carousel.js"></script>
     <title><?php echo ucfirst(basename($_SERVER['PHP_SELF'],'.php')) ?></title>
@@ -56,6 +56,7 @@ li.dropdown:hover > .dropdown-menu {
                         <li><a href="../admin/manageCategory.php">Manage Category</a></li>
                         <li><a href="../admin/manageUser.php">Manage User</a></li>
                         <li><a href="../admin/manageProduct.php">Manage Products</a></li>
+                        <li><a href="../admin/manageAdmin.php">Add Admin</a></li>
                     </ul>
                 </li>
                 <?php

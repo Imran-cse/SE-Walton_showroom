@@ -2,7 +2,10 @@
 include "../includes/header.php";
 include_once "../database/connect.php";
 
-$u_id = $_SESSION['u_id'];
+if(session_status() == PHP_SESSION_ACTIVE && isset($_SESSION['user_id'])){
+    $u_id = $_SESSION['user_id'];
+}
+
 $p_id = $_GET['product_id'];
 
 
@@ -23,7 +26,10 @@ if (isset($_POST['wishlist'])){
     $s_res = mysqli_query($con, $sql3);
 
     if ($s_res->num_rows > 0){
-        echo "Already in your wishlist";
+        $message = "Already in your wishlist";
+            echo '<div id="msg" class="label col-lg-5 col-md-offset-4" style="text-align:center;background-color: #ff8080;">
+        <span style="font-size: 20px;font-family:verdana;">'.$message.'</span>
+    </div>';
     }
 
     else{
@@ -41,6 +47,13 @@ $sql_f = "SELECT * FROM feedback WHERE product_id='$p_id'";
 $res_f = mysqli_query($con, $sql_f)
 
 ?>
+
+<script type="text/javascript">
+    setTimeout(function(){
+  		$('#msg').remove();
+	}, 5000);
+</script>
+
 <body style="font-family: Open Sans Light">
 	<div class="container-fluid">
         <form action="" method="post">
@@ -59,7 +72,9 @@ $res_f = mysqli_query($con, $sql_f)
 						<a href="../resources/images/<?php echo $value['image']; ?>" target="_blank">
 							<img src="../resources/images/<?php echo $value['image']; ?>" alt="<?php echo $value['name']; ?>" style="width:350px;height:350px;">
 						</a>
+						<?php if (isset($_SESSION['user_id'])){ ?>
                         <button class="btn btn-link nounderline" style="text-decoration: none" type="submit" name="wishlist" id="wishlist">Add to Wishlist <span class="glyphicon glyphicon-heart"></span></button>
+                        <?php } ?>
 					</div>
 				</div>
 				<div class="col-md-4 col-md-offset-1">
@@ -68,6 +83,9 @@ $res_f = mysqli_query($con, $sql_f)
 					<h2><?php echo $value['price']; ?><i class="icofont" >&#xeae6;</i></h2>
 					<h4><strong>Quantity: </strong><?php echo $value['quantity']; ?></h4>
 					<p><strong>About: </strong><?php if ($value['description'] == null){echo 'Sorry! No description for this product.';} else {echo $value['description'];}?></p>
+					<br>
+					<br>
+					<br>
 					<p><a class="nounderline" onclick="show()" style="text-decoration: none !important;">Give Feedback about this product</a></p>
 					<script>
 						function show() {
@@ -85,6 +103,7 @@ $res_f = mysqli_query($con, $sql_f)
 						<textarea class="form-control" name="feed" rows="5" id="comment" style="resize: none;"></textarea>
                         <input type="submit" class="btn btn-primary" name="save" value="Submit">
 					</div>
+					<h3><strong>Feedback</strong></h3>
 				<?php }
 				    foreach ($res_f as $f_back){
                         $sql_u = "SELECT name FROM user WHERE id='".$f_back['user_id']."'";
@@ -92,7 +111,6 @@ $res_f = mysqli_query($con, $sql_f)
                         $row = mysqli_fetch_assoc($res_u);
                         ?>
                     <div class="form-group">
-                        <h2><strong>Feedback</strong></h2>
                         <h4><b><?php echo $row['name'] ?>:</b></h4>
                         <p><?php echo $f_back['feedback'] ?></p>
                         <hr>

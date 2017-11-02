@@ -11,35 +11,27 @@ if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $password = md5($password);
+
     $sql = "SELECT * FROM user WHERE email='$email' AND password='$password'";
     $result = mysqli_query($con, $sql) or die(mysqli_error($con));
 
-    if($result->num_rows < 1){
-        //header("Location: login.php");
+    $sql2 = "SELECT * FROM admin WHERE email='$email' AND password='$password'";
+    $result2 = mysqli_query($con, $sql2);
+
+    if($result->num_rows < 1 && $result2->num_rows < 1){
         echo "not valid";
     }
-    else {
+    else if ($result->num_rows > 0 && $result2->num_rows < 1) {
         $value = mysqli_fetch_assoc($result);
         
         $_SESSION['login'] = 'true';
-        $_SESSION['user_id'] = $_POST['email'];
-        $_SESSION['u_id'] = $value['id'];
+        $_SESSION['email'] = $_POST['email'];
+        $_SESSION['user_id'] = $value['id'];
         $_SESSION['user_name'] = $value['name'];
         header("Location:home.php");
     }
-
-}
-
-if (isset($_POST['admin_login'])){
-    
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM admin WHERE mail='$email' AND password='$password'";
-    $result = mysqli_query($con, $sql);
-    
-    if ($result){
-        $value = mysqli_fetch_assoc($result);
+    else if($result->num_rows < 1 && $result2->num_rows > 0){
+        $value = mysqli_fetch_assoc($result2);
 
         $_SESSION['login'] = 'true';
         $_SESSION['admin_id'] = $_POST['email'];
@@ -49,6 +41,7 @@ if (isset($_POST['admin_login'])){
     else{
         header("Location:login.php");
     }
+
 }
 
 ?>
@@ -76,9 +69,6 @@ if (isset($_POST['admin_login'])){
             </div>
             <div align="left" class="col-md-2">
                 <input type="submit" name="login" id="login" value="Login" class="btn btn-primary">
-            </div>
-            <div align="right">
-                <input type="submit" name="admin_login" id="admin_login" value="Admin Login" class="btn">
             </div>
         </form>
     </div>

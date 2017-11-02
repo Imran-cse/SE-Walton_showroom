@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2017 at 11:21 AM
+-- Generation Time: Nov 02, 2017 at 06:53 PM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.19
 
@@ -30,15 +30,16 @@ CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
-  `mail` varchar(128) COLLATE utf8_unicode_ci NOT NULL
+  `email` varchar(128) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`id`, `name`, `password`, `mail`) VALUES
-(1, 'admin', 'admin', 'admin@admin.com');
+INSERT INTO `admin` (`id`, `name`, `password`, `email`) VALUES
+(2, 'Admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com'),
+(3, 'Imran ', '81dc9bdb52d04dc20036dbd8313ed055', 'admin@admin.com');
 
 -- --------------------------------------------------------
 
@@ -79,7 +80,8 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`user_id`, `product_id`, `feedback`) VALUES
-(7, 13, 'Good.');
+(7, 13, 'Good.'),
+(8, 13, 'Very good.\r\n');
 
 -- --------------------------------------------------------
 
@@ -127,7 +129,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `name`, `email`, `password`, `address`, `contact`) VALUES
 (7, 'Yugol Kishor', 'yugol@cseku.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Khulna', 182678236),
-(8, 'Imran', 'imran.cse.ku@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Khan Bahadur Ahsanullah 104', 9478335);
+(8, 'Imran', 'imran.cse.ku@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Khan Bahadur Ahsanullah 104', 9478335),
+(9, 'Imran ', 'imran.cse.ku@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'Khulna', 1681717471);
 
 -- --------------------------------------------------------
 
@@ -200,7 +203,7 @@ ALTER TABLE `wishlist`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `category`
 --
@@ -215,7 +218,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- Constraints for dumped tables
 --
