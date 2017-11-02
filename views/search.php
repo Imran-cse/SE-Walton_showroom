@@ -1,21 +1,23 @@
-<?php include'../includes/header.php'; ?>
+<?php
+include "../includes/header.php";
+?>
 <body>
 	<div class="container" align="center">
-		<h3>Laptop</h3>
+		<h3>Search Results</h3>
 	</div>	
 	<div class="container">
 		<div class="row">
 			<?php
-			$cid = $_GET['category_id'];
-			if(isset($_GET['category_id']))
-			{
-			    include_once '../database/connect.php';
-			$sql = "SELECT * FROM products where category_id='$cid'";
-			$result = mysqli_query($con, $sql);
-			while ($value = mysqli_fetch_assoc($result)) { 
-				
-				?>
-				<div class="col-md-4">
+			if(isset($_POST['search'])){
+				$search = $_POST['search'];
+				if ($search!=null)
+				{
+					include_once '../database/connect.php';
+					$sql = "SELECT * FROM products WHERE name LIKE '%$search%'";
+					$result = mysqli_query($con, $sql);
+					if ($result){
+						while ($value = mysqli_fetch_assoc($result)){ ?>
+						<div class="col-md-4">
 					<div class="thumbnail">
 						<a href="../views/description.php?category_id=<?php echo $value['category_id'];?>&&product_id=<?php echo $value['id']; ?>" target="_self">
 							<img src="../resources/images/<?php echo $value['image']; ?>" alt="<?php echo $value['name']; ?>" style="width:256px;height:256px;">
@@ -24,10 +26,13 @@
 							</div>
 						</a>
 					</div>
-				</div>
-				<?php }
-			}
-			?>
+				</div>	
+					<?php }
+					}
+					elseif ($result==0) echo "Try Different Keyword";
+				}
+				else echo "Please Enter Some Text";
+			}?>
 		</div>
 	</div>
 	<div>

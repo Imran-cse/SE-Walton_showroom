@@ -62,12 +62,27 @@ li.dropdown:hover > .dropdown-menu {
             }
             ?>
         </ul>
+        <form class="navbar-form navbar-left" action="search.php" method="POST">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="search">
+            <div class="input-group-btn">
+            <button class="btn btn-primary" type="submit" >
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+            </div>
+         </div>
+        </form>
         <ul class="nav navbar-nav navbar-right">
             <?php
             if (isset($_SESSION['login'])){?>
             <li><a href="../views/home.php"><span class="glyphicon glyphicon-user"></span><?php echo
             $_SESSION['user_name'] ?></a></li>
-            <li><a href="#"><i class="glyphicon glyphicon-heart"></i></a></li>
+            <?php 
+            if (isset($_SESSION['admin_id'])) {}
+            else {
+                ?>
+                <li><a href="../user/wishlist.php"><i class="glyphicon glyphicon-heart" title="wishlist"></i></a></li>
+            <?php } ?>
             <li><a href="../logout.php" ><span class="glyphicon
                 glyphicon-log-out"></span>
             Logout</a></li>

@@ -2,14 +2,43 @@
 include "../includes/header.php";
 include_once "../database/connect.php";
 
+$u_id = $_SESSION['u_id'];
+$p_id = $_GET['product_id'];
+
+
+//adding feedback
 if (isset($_POST['save'])){
-    $u_id = $_SESSION['u_id'];
-    $p_id = $_GET['product_id'];
+
     $fd = $_POST['feed'];
 
     $sql = "INSERT INTO feedback(user_id, product_id, feedback) VALUES ('$u_id', '$p_id', '$fd')";
     $f_res = mysqli_query($con, $sql);
 }
+
+
+//adding wish to database
+if (isset($_POST['wishlist'])){
+
+    $sql3 = "SELECT * FROM wishlist WHERE user_id='$u_id' AND product_id='$p_id'";
+    $s_res = mysqli_query($con, $sql3);
+
+    if ($s_res->num_rows > 0){
+        echo "Already in your wishlist";
+    }
+
+    else{
+        $sql2 = "INSERT INTO wishlist(user_id, product_id) VALUES ('$u_id', '$p_id')";
+        $w_res = mysqli_query($con, $sql2);
+
+        if ($w_res){
+            echo "Added to your wish";
+        }
+    }
+}
+
+//query for showing feedback
+$sql_f = "SELECT * FROM feedback WHERE product_id='$p_id'";
+$res_f = mysqli_query($con, $sql_f)
 
 ?>
 <body style="font-family: Open Sans Light">
@@ -30,7 +59,7 @@ if (isset($_POST['save'])){
 						<a href="../resources/images/<?php echo $value['image']; ?>" target="_blank">
 							<img src="../resources/images/<?php echo $value['image']; ?>" alt="<?php echo $value['name']; ?>" style="width:350px;height:350px;">
 						</a>
-                        <a class="nounderline" style="text-decoration: none" href="#">Add to Wishlist <span class="glyphicon glyphicon-heart"></span></a>
+                        <button class="btn btn-link nounderline" style="text-decoration: none" type="submit" name="wishlist" id="wishlist">Add to Wishlist <span class="glyphicon glyphicon-heart"></span></button>
 					</div>
 				</div>
 				<div class="col-md-4 col-md-offset-1">
@@ -56,8 +85,22 @@ if (isset($_POST['save'])){
 						<textarea class="form-control" name="feed" rows="5" id="comment" style="resize: none;"></textarea>
                         <input type="submit" class="btn btn-primary" name="save" value="Submit">
 					</div>
-				</div>
-				<?php } }
+				<?php }
+				    foreach ($res_f as $f_back){
+                        $sql_u = "SELECT name FROM user WHERE id='".$f_back['user_id']."'";
+                        $res_u = mysqli_query($con, $sql_u);
+                        $row = mysqli_fetch_assoc($res_u);
+                        ?>
+                    <div class="form-group">
+                        <h2><strong>Feedback</strong></h2>
+                        <h4><b><?php echo $row['name'] ?>:</b></h4>
+                        <p><?php echo $f_back['feedback'] ?></p>
+                        <hr>
+                    </div>
+                    <?php  }  ?>
+                </div>
+
+            <?php }
 		}
 		?>
         </form>

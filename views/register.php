@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
             <div class="form-group" >
                 <label for="name" class="col-md-2 control-label"></label>
                 <div class="col-md-8" align="center">
-                    <input id="name" type="text" name="name" value="" class="form-control" placeholder="Username" >
+                    <input id="name" type="text" name="name" value="" class="form-control" placeholder="Name" >
                 </div>
             </div>
             <div class="form-group">

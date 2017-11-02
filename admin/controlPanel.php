@@ -16,8 +16,8 @@ if (isset($_POST['submit'])) {
 	 $img = ($_FILES['image']['name']); 
 	 
 	 //Writes the information to the database 
-	  $sql = "INSERT INTO products(category_id, name, price, image, quantity, description) VALUES('$category', '$name', '$price', '$img', '$quantity', '$description')";
-	 mysqli_query($con, $sql);
+    $sql = "INSERT INTO products(category_id, name, price, image, quantity, description) VALUES('$category', '$name', '$price', '$img', '$quantity', '$description')";
+     mysqli_query($con, $sql);
 	 //Writes the photo to the server 
 	 if(move_uploaded_file($_FILES['image']['tmp_name'], $target)) 
 	 { 
