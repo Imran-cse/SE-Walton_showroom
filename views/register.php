@@ -4,7 +4,9 @@ include_once '../database/connect.php';
 
 if (isset($_POST['submit'])) {
 
-    if(!empty($_POST['name'])&&!empty($_POST['email'])&&!empty($_POST['password'])&&!empty($_POST['password2'])&&!empty($_POST['address'])&&!empty(['contact'])) {
+    $res = mysqli_query($con, "SELECT * FROM user WHERE email='".$_POST['email']."'");
+
+    if($res->num_rows < 1) {
         $name = $_POST['name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -28,8 +30,8 @@ if (isset($_POST['submit'])) {
         }       
     }
     else {
-        $error_message = "You need to fill all fields";
-        echo '<div id="warning" class="label col-lg-5 col-md-offset-4" style="text-align:center;background-color: #ff8080;">
+        $error_message = "You are already registered";
+        echo '<div id="warning" class="alert alert-warning label col-lg-5 col-md-offset-4" style="text-align:center;background-color: #ff8080;">
         <span style="font-size: 20px;font-family:verdana;">'.$error_message.'</span>
     </div>';
     }
