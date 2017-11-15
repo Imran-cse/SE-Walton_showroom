@@ -8,6 +8,9 @@
 		<div style="padding: 25px;font-size: 18px;" class="label-success">
 			<p class="text-danger">Customer Care No: 01XXXXXXXX</p>
 		</div>
+		<div style="padding: 25px;font-size: 18px;" class="label-success">
+			<p class="text-danger">Showroom Manager contact No: 01XXXXXXXX</p>
+		</div>
 	</div>
 	<div>
     <br><br><br>

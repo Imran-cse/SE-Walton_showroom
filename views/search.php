@@ -29,7 +29,7 @@ include "../includes/header.php";
 				</div>	
 					<?php }
 					}
-					elseif ($result==0) echo "Try Different Keyword";
+					elseif (empty($result)) echo "Try Different Keyword";
 				}
 				else echo "Please Enter Some Text";
 			}?>

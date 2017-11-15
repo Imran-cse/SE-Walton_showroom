@@ -37,7 +37,10 @@ if (isset($_POST['wishlist'])){
         $w_res = mysqli_query($con, $sql2);
 
         if ($w_res){
-            echo "Added to your wish";
+            $message = "Added to your wishlist";
+            echo '<div id="msg2" class="label col-lg-5 col-md-offset-4" style="text-align:center;background-color: #ff8080;">
+        <span style="font-size: 20px;font-family:verdana;">'.$message.'</span>
+    </div>';
         }
     }
 }
@@ -51,6 +54,10 @@ $res_f = mysqli_query($con, $sql_f)
 <script type="text/javascript">
     setTimeout(function(){
   		$('#msg').remove();
+	}, 5000);
+
+	setTimeout(function(){
+  		$('#msg2').remove();
 	}, 5000);
 </script>
 
@@ -103,8 +110,10 @@ $res_f = mysqli_query($con, $sql_f)
 						<textarea class="form-control" name="feed" rows="5" id="comment" style="resize: none;"></textarea>
                         <input type="submit" class="btn btn-primary" name="save" value="Submit">
 					</div>
-					<h3><strong>Feedback</strong></h3>
-				<?php }
+					
+				<?php } ?>
+				<h3><strong>Feedback</strong></h3>
+				<?php
 				    foreach ($res_f as $f_back){
                         $sql_u = "SELECT name FROM user WHERE id='".$f_back['user_id']."'";
                         $res_u = mysqli_query($con, $sql_u);

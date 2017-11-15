@@ -2,7 +2,13 @@
 include_once "../includes/header.php";
 include_once "../database/connect.php";
 
-$user_id = $_SESSION['user_id'];
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_GET['user_id'];
+}
+
+if (isset($_GET['user_id'])) {
+    $user_id = $_GET['user_id'];
+}
 
 //deleting wish of a product
 if (isset($_GET['del_wish'])){

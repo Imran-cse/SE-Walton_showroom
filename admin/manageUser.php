@@ -31,7 +31,7 @@ $result = mysqli_query($con, $sql);
                     foreach ($result as $value) {
                         ?>
                         <tr>
-                            <td><?php echo $value['name'] ?></td>
+                            <td><a href="../user/wishlist.php?user_id=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></td>
                             <td><?php echo $value['email'] ?></td>
                             <td><a href="?del=<?php echo $value['id'] ?>">Delete</a></td>
                         </tr>
